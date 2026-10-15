@@ -1,10 +1,11 @@
 name: APK Android de test
 
-# Une étape terminée = un tag vX.Y.Z poussé : l'APK est publié dans les Releases du dépôt.
+# Une étape terminée = tour-des-99-etages/VERSION modifié : l'APK est publié dans les
+# Releases du dépôt (tag vX.Y.Z créé automatiquement).
 # Lancement manuel possible depuis l'onglet Actions (l'APK est alors dans les artefacts du run).
 on:
   push:
-    tags: ["v*"]
+    paths: ["tour-des-99-etages/VERSION"]
   workflow_dispatch:
 
 permissions:
@@ -63,8 +64,9 @@ jobs:
 
       - name: Numéroter la version
         run: |
-          name="${GITHUB_REF_NAME#v}"
-          [[ "$GITHUB_REF_TYPE" == "tag" ]] || name="0.0.${GITHUB_RUN_NUMBER}-dev"
+          name="$(tr -d '[:space:]' < "$PROJECT_DIR/VERSION")"
+          [[ "$GITHUB_EVENT_NAME" == "push" ]] || name="${name}-dev${GITHUB_RUN_NUMBER}"
+          echo "APP_VERSION=${name}" >> "$GITHUB_ENV"
           sed -i "s/^version\/name=.*/version\/name=\"${name}\"/; s/^version\/code=.*/version\/code=${GITHUB_RUN_NUMBER}/" \
             "$PROJECT_DIR/export_presets.cfg"
           echo "APK_NAME=tour99-${name}.apk" >> "$GITHUB_ENV"
@@ -85,11 +87,14 @@ jobs:
           path: build/${{ env.APK_NAME }}
 
       - name: Publier la Release
-        if: github.ref_type == 'tag'
+        if: github.event_name == 'push'
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: v${{ env.APP_VERSION }}
+          target_commitish: ${{ github.sha }}
+          name: La Tour des 99 Étages v${{ env.APP_VERSION }}
           files: build/${{ env.APK_NAME }}
           prerelease: true
           body: |
-            APK de test (debug) de La Tour des 99 Étages, version ${{ github.ref_name }}.
+            APK de test (debug) de La Tour des 99 Étages, version ${{ env.APP_VERSION }}.
             Sur Android : télécharger le fichier .apk, l'ouvrir, autoriser l'installation depuis cette source.
