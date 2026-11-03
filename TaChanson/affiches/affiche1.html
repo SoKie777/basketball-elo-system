@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Affiche principale · Ta Chanson (1080×1920)</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#F77F00;--orange-deep:#D96400;--green:#009E60;--green-deep:#00663F;--cream:#FFF8EF;--ink:#1F1A14}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{font-family:"Nunito",sans-serif;color:#fff;background:linear-gradient(170deg,#FF9A2E 0%,var(--orange) 38%,#E36400 70%,#B84E00 100%);position:relative}
+.blob{position:absolute;border-radius:50%}
+.b1{width:900px;height:900px;right:-420px;top:-300px;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 65%)}
+.b2{width:1300px;height:1300px;left:-300px;bottom:-760px;background:var(--green)}
+.b3{width:1300px;height:1300px;left:-260px;bottom:-800px;background:var(--green-deep);opacity:.55}
+.page{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;padding:90px 80px 70px}
+.page>*{flex-shrink:0}
+.brand{display:flex;align-items:center;gap:22px;font-family:"Baloo 2";font-weight:800;font-size:60px;line-height:1}
+.mark{width:84px;height:84px;border-radius:24px;background:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.15)}
+.mark svg{width:48px;height:48px}
+h1{font-family:"Baloo 2";font-weight:800;font-size:140px;line-height:.92;margin-top:40px;letter-spacing:-2px;text-shadow:0 6px 0 rgba(0,0,0,.08)}
+.sub{display:inline-block;margin-top:26px;background:#fff;color:var(--orange-deep);font-family:"Baloo 2";font-weight:800;font-size:64px;line-height:1;padding:18px 34px 12px;border-radius:999px;box-shadow:0 14px 30px rgba(120,50,0,.25)}
+.disc-zone{position:relative;height:400px;margin-top:20px}
+.disc{position:absolute;left:50%;top:50%;width:340px;height:340px;margin:-170px 0 0 -170px;border-radius:50%;background:repeating-radial-gradient(circle,#1d140b 0 3px,#2a1c0f 3px 8px);box-shadow:0 30px 60px rgba(60,20,0,.35),0 0 0 10px rgba(255,255,255,.12)}
+.disc::before{content:"";position:absolute;inset:110px;border-radius:50%;background:conic-gradient(var(--orange) 0 50%,var(--green) 50% 100%);box-shadow:0 0 0 8px #fff}
+.disc::after{content:"";position:absolute;left:50%;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:#fff}
+.tag{position:absolute;background:#fff;color:var(--ink);font-family:"Baloo 2";font-weight:800;font-size:46px;line-height:1;padding:18px 30px 12px;border-radius:999px;box-shadow:0 14px 30px rgba(60,20,0,.25);display:flex;align-items:center;gap:12px}
+.tag i{display:block;width:18px;height:18px;border-radius:50%;background:var(--green)}
+.t1{left:10px;top:30px;transform:rotate(-6deg)}
+.t2{right:10px;top:0;transform:rotate(5deg)}
+.t3{left:0;bottom:10px;transform:rotate(4deg)}
+.t4{right:10px;bottom:40px;transform:rotate(-5deg)}
+.t2 i,.t4 i{background:var(--orange)}
+.note{position:absolute;color:#fff;opacity:.9}
+.n1{left:330px;top:-20px;width:60px}
+.n2{right:300px;bottom:-20px;width:54px}
+.offers{margin-top:24px;background:rgba(255,255,255,.97);color:var(--ink);border-radius:44px;padding:34px 46px;box-shadow:0 24px 60px rgba(0,40,20,.25)}
+.offers h2{font-family:"Baloo 2";font-weight:800;font-size:44px;color:var(--green-deep);line-height:1;margin-bottom:18px}
+.row{display:flex;justify-content:space-between;align-items:baseline;font-size:40px;font-weight:800;padding:9px 0;border-bottom:3px dashed #F0DFC8}
+.row:last-child{border-bottom:0}
+.row b{font-family:"Baloo 2";font-weight:800;font-size:50px;color:var(--orange-deep)}
+.row small{font-size:30px;color:#6a5c4d;font-weight:700}
+.bottom{margin-top:auto}
+.cta{display:flex;align-items:center;gap:24px;background:#fff;color:var(--green-deep);border-radius:999px;padding:22px 40px;font-weight:900;font-size:48px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.cta svg{width:60px;height:60px;flex:none}
+.cta span small{display:block;font-size:30px;color:#3b4b43;font-weight:800}
+.meta{margin-top:20px;display:flex;justify-content:space-between;font-weight:800;font-size:34px}
+.ia{margin-top:18px;text-align:center;font-weight:800;font-size:30px;background:rgba(0,0,0,.18);border-radius:999px;padding:14px 20px}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b3"></div><div class="blob b2"></div>
+<div class="page">
+  <div class="brand">
+    <div class="mark"><svg viewBox="0 0 24 24"><path fill="#F77F00" d="M9 18.5a3 3 0 1 1-2-2.83V5l12-2.5v12a3 3 0 1 1-2-2.83V6.9L9 8.6z"/></svg></div>
+    Ta Chanson
+  </div>
+
+  <h1>Ton prénom<br>en musique,</h1>
+  <div><span class="sub">livré en 24 h.</span></div>
+
+  <div class="disc-zone">
+    <svg class="note n1" viewBox="0 0 24 24"><path fill="currentColor" d="M9 18.5a3 3 0 1 1-2-2.83V5l12-2.5v12a3 3 0 1 1-2-2.83V6.9L9 8.6z"/></svg>
+    <svg class="note n2" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
+    <div class="disc"></div>
+    <div class="tag t1"><i></i>Aïcha</div>
+    <div class="tag t2"><i></i>Maman</div>
+    <div class="tag t3"><i></i>Koffi &amp; Grâce</div>
+    <div class="tag t4"><i></i>Papa Yao</div>
+  </div>
+
+  <div class="offers">
+    <h2>Écrite sur mesure avec tes souvenirs</h2>
+    <div class="row"><span>Statut <small>· 1 min</small></span><b>1 500 F</b></div>
+    <div class="row"><span>Complète <small>· 2 à 3 min</small></span><b>3 000 F</b></div>
+    <div class="row"><span>Avec clip <small>· + tes photos</small></span><b>5 000 F</b></div>
+    <div class="row"><span>Événement</span><b><small>dès</small> 25 000 F</b></div>
+  </div>
+
+  <div class="bottom">
+    <div class="cta">
+      <svg viewBox="0 0 24 24"><path fill="#009E60" d="M12 3C6.98 3 3 6.69 3 11.25c0 2.4 1.12 4.55 2.9 6.06L5 21l4.04-1.86c.93.24 1.92.36 2.96.36 5.02 0 9-3.69 9-8.25S17.02 3 12 3z"/></svg>
+      <span>01 40 57 59 79<small>Commande sur WhatsApp</small></span>
+    </div>
+    <div class="meta"><span>ta-chanson.pages.dev</span><span>Wave · Orange Money</span></div>
+    <div class="ia">Chansons créées avec l'aide de l'IA, écrites sur mesure.</div>
+  </div>
+</div>
+</body>
+</html>

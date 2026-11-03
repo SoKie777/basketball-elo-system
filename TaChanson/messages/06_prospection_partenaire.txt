@@ -1,0 +1,32 @@
+Bonjour [Nom du commerce] 👋
+
+Je m'appelle Don et je lance Ta Chanson à Abidjan : des chansons personnalisées avec le prénom de la personne fêtée, écrites sur mesure et créées avec l'aide de l'IA, livrées en 24 h sur WhatsApp (dès 1 500 F).
+
+[Phrase selon le métier, voir plus bas]
+
+Je vous propose un partenariat simple :
+✅ 500 F pour vous pour chaque commande payée par un client que vous m'envoyez
+✅ Rien à gérer : vous partagez votre lien (ou mon numéro), je m'occupe de tout
+✅ Votre lien à vous : https://ta-chanson.pages.dev/?ref=[CODE] — chaque commande passée avec votre code est comptée
+✅ Commissions versées chaque semaine par Wave
+
+Vous pouvez écouter des exemples ici : https://ta-chanson.pages.dev/#exemples
+
+Si ça vous intéresse, je peux vous offrir une chanson démo pour votre commerce. Merci et belle journée !
+Don · Ta Chanson · WhatsApp 01 40 57 59 79
+
+------------------------------------------------------------
+PHRASE SELON LE MÉTIER (à coller à la place de [Phrase selon le métier…]) :
+
+• Pâtissier : « Vos clients commandent un gâteau d'anniversaire ? Une chanson à son prénom au moment de souffler les bougies, c'est l'émotion garantie, et un service en plus pour votre pâtisserie. »
+
+• Organisateur de mariage : « Une chanson avec les prénoms des mariés pour l'entrée de la salle, la première danse ou la dot : vos couples vont adorer, et ça vous démarque. »
+
+• Photographe : « Vos photos de mariage, de baptême ou d'anniversaire deviennent un clip avec une chanson à leur prénom : un souvenir encore plus fort à livrer à vos clients. »
+
+• Fleuriste : « Un bouquet + une chanson à son prénom envoyée sur WhatsApp au moment de la livraison : le cadeau parfait pour vos clients qui veulent marquer le coup. »
+
+• Église : « Anniversaires de mariage, baptêmes, remerciements, hommages : une chanson gospel écrite sur mesure pour vos fidèles. Les 500 F par commande peuvent soutenir les œuvres de l'église. »
+
+CODE : choisis un code court et unique par partenaire, ex. PATISSERIE-LAPASSION, FLEURS-PETALIA.
+Note-le dans prospects.csv. Il apparaîtra dans le message de commande du client (« Code partenaire »).

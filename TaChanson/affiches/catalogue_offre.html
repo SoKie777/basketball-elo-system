@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Image catalogue · Ta Chanson (1080×1080)</title>
+<!-- Une image par offre : ouvrir avec #statut, #complete, #clip ou #evenement -->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#F77F00;--orange-deep:#D96400;--green:#009E60;--green-deep:#00663F;--ink:#1F1A14}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{font-family:"Nunito",sans-serif;color:#fff;background:var(--bg);position:relative}
+body.statut{--bg:linear-gradient(150deg,#FF9A2E,#F77F00 60%,#D96400);--accent:#fff;--chip:#1F1A14}
+body.complete{--bg:linear-gradient(150deg,#13B574,#009E60 55%,#00663F);--accent:#FFC56B;--chip:#00663F}
+body.clip{--bg:linear-gradient(150deg,#2B1D10,#3B250F 50%,#0D3A27);--accent:#FF9A2E;--chip:#2B1D10}
+body.evenement{--bg:linear-gradient(150deg,#0A3D28,#00563A 50%,#D96400 140%);--accent:#FFC56B;--chip:#0A3D28}
+.ring{position:absolute;right:-200px;top:-200px;width:720px;height:720px;border-radius:50%;border:70px solid rgba(255,255,255,.10)}
+.ring2{position:absolute;left:-160px;bottom:-260px;width:600px;height:600px;border-radius:50%;background:rgba(255,255,255,.07)}
+.page{position:relative;z-index:1;height:100%;padding:80px;display:flex;flex-direction:column}
+.brand{display:flex;align-items:center;gap:16px;font-family:"Baloo 2";font-weight:800;font-size:42px;line-height:1}
+.mark{width:62px;height:62px;border-radius:18px;background:#fff;display:grid;place-items:center}
+.mark svg{width:36px;height:36px}
+.kicker{margin-top:120px;font-weight:900;font-size:34px;letter-spacing:3px;text-transform:uppercase;opacity:.9}
+h1{font-family:"Baloo 2";font-weight:800;font-size:150px;line-height:.9;margin-top:10px;letter-spacing:-2px}
+.price{margin-top:26px;display:inline-flex;align-items:baseline;gap:14px;background:#fff;color:var(--chip);font-family:"Baloo 2";font-weight:800;font-size:96px;line-height:1;padding:22px 44px 12px;border-radius:999px;align-self:flex-start}
+.price small{font-size:40px}
+.desc{margin-top:40px;font-size:42px;font-weight:800;line-height:1.3;max-width:860px}
+.desc b{color:var(--accent)}
+.ia{margin-top:auto;font-weight:800;font-size:28px;opacity:.9}
+</style>
+</head>
+<body>
+<div class="ring"></div><div class="ring2"></div>
+<div class="page">
+  <div class="brand">
+    <div class="mark"><svg viewBox="0 0 24 24"><path fill="#F77F00" d="M9 18.5a3 3 0 1 1-2-2.83V5l12-2.5v12a3 3 0 1 1-2-2.83V6.9L9 8.6z"/></svg></div>
+    Ta Chanson
+  </div>
+  <div class="kicker" id="kicker"></div>
+  <h1 id="nom"></h1>
+  <div class="price" id="prix"></div>
+  <p class="desc" id="desc"></p>
+  <div class="ia">Créée avec l'aide de l'IA, écrite sur mesure · Livrée sur WhatsApp</div>
+</div>
+<script>
+var OFFRES = {
+  statut:    {kicker:"Chanson personnalisée", nom:"Statut",    prix:'1 500 <small>F</small>',  desc:"Un couplet + le refrain avec <b>son prénom</b>, environ 1 min. Parfait pour un statut WhatsApp."},
+  complete:  {kicker:"Chanson personnalisée", nom:"Complète",  prix:'3 000 <small>F</small>',  desc:"Une vraie chanson de 2 à 3 min avec <b>son prénom</b> et vos souvenirs, livrée en 24 h."},
+  clip:      {kicker:"Chanson + vidéo",       nom:"Avec clip", prix:'5 000 <small>F</small>',  desc:"La chanson complète + un <b>clip avec 10 à 20 de vos photos</b>, prêt à partager."},
+  evenement: {kicker:"Mariage · Dot · Entreprise", nom:"Événement", prix:'<small>dès</small> 25 000 <small>F</small>', desc:"Une chanson pour tout le monde, <b>avec clip</b>, écrite sur mesure. Devis sur WhatsApp."}
+};
+var k = (location.hash || "#complete").slice(1);
+var o = OFFRES[k] || OFFRES.complete;
+document.body.className = OFFRES[k] ? k : "complete";
+document.getElementById("kicker").textContent = o.kicker;
+document.getElementById("nom").textContent = o.nom;
+document.getElementById("prix").innerHTML = o.prix;
+document.getElementById("desc").innerHTML = o.desc;
+</script>
+</body>
+</html>
